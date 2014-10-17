@@ -1,0 +1,9 @@
+export PATH="${HOME}"
+export CDPATH=.:~:~/Sites
+export NODE_PATH="/usr/local/lib/node_modules"
+export EDITOR="/usr/bin/subl -w"
+export HOMEBREW_GITHUB_API_TOKEN="set new on https://github.com/settings/tokens/new"
+
+if ! command -v boot2docker >/dev/null; then
+  export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
+fi

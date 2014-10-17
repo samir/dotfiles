@@ -1,0 +1,25 @@
+# Shortcuts
+alias h="heroku"
+
+alias zshconfig="${EDITOR} ~/.zshrc"
+alias ohmyzsh="${EDITOR} ~/.oh-my-zsh"
+
+# Utils
+alias clear_DS_Store="find . -type f -name '.DS_Store' -exec rm -v {} \;"
+alias reset_camera="sudo killall VDCAssistant"
+alias ip="whatsmyip; whatsmyip | pbcopy"
+alias fs="foreman start --procfile=Procfile.development --port=3000"
+alias s="APP_ENV=development php -S 0.0.0.0:8000"
+alias f="foreman start -f Procfile.development"
+
+# Improved commands
+alias l="ls -lah"
+alias tf="tail -f"
+alias duh="du -d1 -h"
+alias psax="ps ax | grep -v grep | grep $1"
+alias pp="pwd | pbcopy"
+alias gv='git rev-parse HEAD'
+
+# Overrides
+alias top="htop"
+alias clear="osascript -e 'if application \"Terminal\" is frontmost then tell application \"System Events\" to keystroke \"k\" using command down'"
