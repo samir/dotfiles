@@ -1,0 +1,62 @@
+[alias]
+  b = branch
+  ci = commit
+  co = checkout
+  dw = diff --word-diff
+  fl = log -p
+  lo = log --graph --all --pretty=format:'%Cred%h%Creset - %Cgreen(%cr)%Creset %s%C(yellow)%d%Creset' --abbrev-commit --date=relative
+  graph = log --graph --all --decorate
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  sb = status -sb
+  sh = !git-sh
+  st = status
+  who = shortlog -s --
+  ign = ls-files -o -i --exclude-standard
+  ignt = ls-files -o
+  glog = log --all --pretty='format:%d %Cgreen%h%Creset %an - %s' --graph
+	undo-commit = reset --soft HEAD^
+[branch]
+  autosetuprebase = always
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+  ui = true
+[color "diff"]
+  whitespace = white reverse
+[core]
+  pager = `brew --prefix`/share/git-core/contrib/diff-highlight/diff-highlight | less
+  editor = subl -w
+  excludefile = /Users/samir/.gitignore
+	excludesfile = /Users/samir/.gitignore_global
+  whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol,space-before-tab
+[apply]
+    whitespace = fix
+[github]
+  user = samir
+  token = ******
+[help]
+  autocorrect = 1
+[push]
+  default = current
+#[user]
+#	email = samirbraga@gmail.com
+#	name = Samir Braga
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[pager]
+	log = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight
+	show = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight
+	diff = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
+[user]
+	name = Samir Braga
+	email = samirbraga@gmail.com
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[credential]
+	helper = osxkeychain

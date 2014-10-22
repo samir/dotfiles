@@ -1,0 +1,13 @@
+.DS_Store
+database.yml
+log/*
+*.sqlite3
+db/schema.rb
+*.*~
+*.pyc
+.*.swp
+.swp
+pkg
+tmp
+coverage
+*.log
